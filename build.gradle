@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+description = 'DataTables Java bridge'
+version = '1.0.0'
+
+group = 'nl.eveoh'
+
+jar {
+    manifest {
+        attributes(
+            'Implementation-Title': 'DataTables Java bridge',
+        )
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "https://maven.eveoh.nl/content/repositories/releases"
+            if (project.hasProperty('mavenUser')) {
+                credentials {
+                    username mavenUser
+                    password mavenPass
+                }
+            }
+        }
+    }
+}
