@@ -4,7 +4,7 @@ This library contains classes for marshalling AJAX requests from and responses t
 ## Usage with Spring MVC
 In this example, *POST* request is used to fetch the table data asynchronously, because then we can send our request as JSON in the request body. As you can see, Spring MVC will unmarshall the request automatically.
 
-###### Controller
+##### Controller
 ```java
 @ResponseBody
 @RequestMapping(value = "/data", method = RequestMethod.POST)
@@ -46,16 +46,16 @@ public DataTablesResponse<SomeClass> find(@RequestBody DataTablesRequest dtReque
         },
         columns: [
             {
-                name: "property1",
-                data: "property1"
+                name: 'property1',
+                data: 'property1'
             },
             {
-                name: "property2",
-                data: "property2"
+                name: 'property2',
+                data: 'property2'
             }
         ],
-        order: [[ 0, "asc" ]],
-        lengthMenu: [20, 50, 100]
+        order: [[ 0, 'asc' ]],
+        lengthMenu: [ 20, 50, 100 ]
     });
 </script>
 ```
