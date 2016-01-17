@@ -2,7 +2,7 @@
 This library contains classes for marshalling AJAX requests from and responses to [DataTables](https://www.datatables.net/), using an object mapper like [Jackson](https://github.com/FasterXML/jackson).
 
 ## Usage with Spring MVC
-In this example, *POST* request is used to fetch the table data asynchronously, because then we can send our request as JSON in the request body. As you can see, Spring MVC will unmarshall the request automatically.
+In this example, a *POST* request is used to fetch the table data asynchronously, because then we can send our request as JSON in the request body. As you can see, Spring MVC will unmarshall the request automatically.
 
 ##### Controller
 ```java
