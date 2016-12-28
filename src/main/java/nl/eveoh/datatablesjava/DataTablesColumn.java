@@ -21,20 +21,11 @@ package nl.eveoh.datatablesjava;
 */
 public class DataTablesColumn {
 
-    private String data;
     private String name;
     private boolean searchable;
     private boolean orderable;
     private DataTablesSearch search;
 
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
 
     public String getName() {
         return name;
