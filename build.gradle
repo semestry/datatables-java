@@ -14,10 +14,18 @@ jar {
     }
 }
 
+task sourcesJar(type: Jar, dependsOn: classes) {
+    from sourceSets.main.allSource
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
             from components.java
+
+            artifact sourcesJar {
+                classifier = 'sources'
+            }
         }
     }
     repositories {
