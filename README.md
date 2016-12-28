@@ -17,7 +17,7 @@ public DataTablesResponse<SomeClass> find(@RequestBody DataTablesRequest dtReque
     dtResponse.setDraw(dtRequest.getDraw());
     
     // Call dtResponse.setData(..), dtResponse.setRecordsTotal(..) and
-    // dtResponse.setRecordsFiltered(..) to populate the response with you data.
+    // dtResponse.setRecordsFiltered(..) to populate the response with your data.
 
     return dtResponse;
 }
